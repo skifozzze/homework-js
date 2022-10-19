@@ -1,8 +1,10 @@
+const categoriesEl = document.querySelectorAll('.item');
+console.log(`у списку ${categoriesEl.length} категорій`);
 
+categoriesEl.forEach(category => {
+  const categoryTitleEl = category.querySelector('h2');
+  const elementEl = category.querySelectorAll('li');
 
-let numberOfCategories = document.querySelectorAll('.item').length;
-console.log(`у списку ${numberOfCategories} категорій`);
-
-
-const categoreisEl = document.querySelectorAll('h2');
-console.log(`${categoreisEl}`)
+  console.log(`категорія: ${categoryTitleEl.textContent}`);
+  console.log(`кількість елементів: ${elementEl.length}`);
+});
